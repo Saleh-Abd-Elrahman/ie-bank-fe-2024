@@ -204,7 +204,11 @@ export default {
     RESTcreateAccount(payload) {
       const path = `${process.env.VUE_APP_ROOT_URL}/accounts`;
       axios
-        .post(path, payload)
+        .post(path, payload, {
+            headers: {
+              'Content-Type': 'application/json',
+            },
+          })
         .then((response) => {
           this.RESTgetAccounts();
           // For message alert
