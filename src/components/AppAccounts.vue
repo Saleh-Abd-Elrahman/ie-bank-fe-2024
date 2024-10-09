@@ -189,7 +189,7 @@ export default {
 
     //GET function
     RESTgetAccounts() {
-      const path = `${process.env.VUE_APP_ROOT_URL}/accounts`;
+      const path = `http://127.0.0.1:5000/accounts`;
       axios
         .get(path)
         .then((response) => {
