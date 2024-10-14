@@ -10,8 +10,8 @@ on:
   workflow_dispatch:
 
 env:
-  FRONTEND_WEBAPP_DEV: sabdelrahman-fe-dev
-  FRONTEND_WEBAPP_UAT: sabdelrahman1-fe-uat
+  FRONTEND_WEBAPP_DEV: sabdelrahman1-fe-dev
+  FRONTEND_WEBAPP_UAT: sabdelrahman2-fe-uat
 
 jobs:
   build-dev:
