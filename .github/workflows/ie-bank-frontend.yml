@@ -62,7 +62,7 @@ jobs:
           app-name: ${{ env.FRONTEND_WEBAPP_DEV }}
           package: .
 
-          
+
   build-uat:
     runs-on: ubuntu-latest
     steps:
@@ -76,7 +76,7 @@ jobs:
       - name: npm install, build, and test (UAT)
         run: |
           npm install
-          npm run build:uat ## This command will build the Vue.js app using .env.uat variables
+          npm run build -- --mode development --dest dist-dev ## This command will build the Vue.js app using .env.uat variables
 
       - name: Upload artifact for deployment job (UAT)
         uses: actions/upload-artifact@v4
